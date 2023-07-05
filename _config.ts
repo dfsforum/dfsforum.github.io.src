@@ -1,5 +1,5 @@
 import lume from "lume/mod.ts";
-//import remark from "lume/plugins/remark.ts"; // broken node package
+//import remark from "lume/plugins/remark.ts"; // many nodejs dependencies, broken node package
 import tailwindcss from "lume/plugins/tailwindcss.ts";
 import postcss from "lume/plugins/postcss.ts";
 
@@ -19,7 +19,9 @@ site.ignore("*.json");
 site.ignore("*.zip");
 site.ignore("doc");
 site.ignore("vendor");
+site.ignore("_vendor");
 site.ignore("node_modules");
+site.ignore("README.src.md");
 site.ignore("LICENSE.txt");
 site.ignore("SETUP.md");
 
@@ -31,9 +33,13 @@ site.copy("js/");
 site.copy("img/");
 site.copy("icon.png");
 site.copy("favicon.ico");
-site.copy("README.md");
+site.copy("humans.txt");
+site.copy("robots.txt");
+site.copy("site.webmanifest");
+site.copy("browserconfig.xml");
+site.copy("README.prod.md", "README.md");
 
-//site.use(remark()); // broken node package
+//site.use(remark()); // many nodejs dependencies, one broken node package
 site.use(tailwindcss());
 site.use(postcss());
 
