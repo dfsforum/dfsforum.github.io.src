@@ -14,6 +14,7 @@ const site = lume({
 // Ignore files and directories not part of the deployed site. All files and 
 // directories that begin with . or _ are ignored by default.
 site.ignore("shell.*");
+site.ignore(".direnv");
 site.ignore("deno.*");
 site.ignore("*.json");
 site.ignore("*.zip");
@@ -31,6 +32,7 @@ site.ignore("SETUP.md");
 // if they have a known extension like .md or .njk.
 site.copy("js/");
 site.copy("img/");
+site.copy("fonts/");
 site.copy("icon.png");
 site.copy("favicon.ico");
 site.copy("humans.txt");
