@@ -4,7 +4,7 @@ import tailwindcss from "lume/plugins/tailwindcss.ts";
 import postcss from "lume/plugins/postcss.ts";
 
 const site = lume({
-  dest: "../dssforum.github.io",
+  dest: "../dfsforum.github.io",
 
   // replace relative links with absolute:
   // location: new URL("https://dssforum.org/"),
@@ -14,6 +14,7 @@ const site = lume({
 // Ignore files and directories not part of the deployed site. All files and 
 // directories that begin with . or _ are ignored by default.
 site.ignore("shell.*");
+site.ignore(".direnv");
 site.ignore("deno.*");
 site.ignore("*.json");
 site.ignore("*.zip");
@@ -21,7 +22,7 @@ site.ignore("doc");
 site.ignore("vendor");
 site.ignore("_vendor");
 site.ignore("node_modules");
-site.ignore("README.src.md");
+site.ignore("README.md");
 site.ignore("LICENSE.txt");
 site.ignore("SETUP.md");
 
@@ -31,6 +32,7 @@ site.ignore("SETUP.md");
 // if they have a known extension like .md or .njk.
 site.copy("js/");
 site.copy("img/");
+site.copy("fonts/");
 site.copy("icon.png");
 site.copy("favicon.ico");
 site.copy("humans.txt");
