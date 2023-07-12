@@ -5,7 +5,7 @@ dist
 .cache
 *.swp
 *vim~
-deno.lock
+*.lock
 
 # Nix
 .direnv

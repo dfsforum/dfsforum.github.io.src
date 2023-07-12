@@ -1,5 +1,5 @@
 layout: layout.njk
-title: Decentralized Systems Stability Forum
-description: An academic and industry research collaboration on developing the science of financial stability in decentralized systems.  The work encompasses, and is limited to, all components of the decentralized financial ecosystem - L1s, L2s, bridging, protocol design, implementation, and governance.
-url_prod: https://dssforum.org/
+title: Decentralized Financial Stability Forum
+description: An academic and industry research collaboration on the science of financial stability in decentralized systems.  The work encompasses, and is limited to, all components of the decentralized financial ecosystem - blockchains, L1s, L2s, bridging, protocol design, implementation, and governance.
+url_prod: https://dfsforum.org/
 image_logo: img/data-1293312_1280.png

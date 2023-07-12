@@ -34,7 +34,7 @@ https://github.com/nix-community/nix-direnv
 -- run `source ~/.zshrc`
 
 2. Create a direnv project directory for this project with Deno installed
--- create a project directory, cc into it
+-- create a project directory, cd into it
 -- create a shell.nix that loads Deno: 
 
 ````
@@ -49,7 +49,7 @@ pkgs.mkShell {
 
 -- `echo "use nix" >> .envrc' (or "use flake" if you're using Nix Flakes)
 -- `direnv allow`
--- `cd ..`
+-- `cd ..` (to unload direnv)
 -- `cd <projectdir>` (to reload direnv)
 -- run or add to .zshrc or .profile `export PATH="/home/<user>/.deno/bin:$PATH"`
 -- run `deno --version` to test

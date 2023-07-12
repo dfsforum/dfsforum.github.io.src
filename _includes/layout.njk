@@ -1,51 +1,323 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 
 <head>
   <meta charset="utf-8">
   <title>{{ title }}</title>
   <meta name="description" content="{{ description }}">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-  <meta property="og:title" content="{{ title }}">
-  <meta property="og:type" content="{{ type }}">
-  <meta property="og:url" content="{{ url_prod }}">
-  <meta property="og:image" content="{{ image_logo }}">
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+  <meta property="og:title" content="{{ title }}" />
+  <meta property="og:description" content="{{ description }}" />
+  <meta property="og:type" content="{{ type }}" />
+  <meta property="og:url" content="{{ url_prod }}" />
+  <meta property="og:image" content="{{ image_logo }}" />
 
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="apple-touch-icon" href="icon.png" />
   <!-- Place favicon.ico in the root directory -->
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/fonts/nitti.css" />
+  <link rel="stylesheet" type="text/css" href="css/fonts/ibmplexmono.css" />
+  <link rel="stylesheet" type="text/css" href="css/fonts/ibmplexsans.css" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel="stylesheet" type="text/css" href="css/custom.css" />
+  <link rel="stylesheet" type="text/css" href="css/footer.css" />
 
-  <meta name="theme-color" content="#fafafa">
+  <style type="text/css">
+    .no-fouc {display: none;}
+  </style>
+
+  <script type="text/javascript">
+    document.documentElement.className = 'no-fouc';
+  </script>
+
+  <!-- <meta name="theme-color" content="#fafafa">-->
 </head>
 
-<body>
-  
-  <!-- main -->
-  {{ content | safe }}
-  <!-- /main -->
+<body class="landing">
 
-  <!-- footer -->
-  <!-- license -->
- <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="http://DSSForum.org">Decentralized Systems Stability Forum</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="http://DSSForum.org">DSSForum.org</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p> 
+  <header><div class="header-wrapper"><div class="inner-wrapper">
+    <nav id="navBar" class="no-js nav-bar">
+      <div id='nav-toggle' class="burgermenu" href="#">☰</div>
+      <div id='overlay'></div>
+      <div id="burgernav">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#team">Team</a></li>
+      </ul>
+      </div>
 
-  <!-- /footer -->
-  
-  <!-- scripts -->
-  <script src="js/vendor/modernizr-3.11.2.min.js"></script>
-  <script src="js/vendor/jquery-3.7.0.min.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
+      <a class="nav-logo" href="/">
+        <img class='logo logo-dark' src='/img/landing/dfsforum_235x49.png' /><img class='logo logo-light' src='/img/landing/dfsforum_235x49.png' />
+      </a>
 
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+      <div class="nav-right ">
+      <div class="nav-links ">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#team">Team</a></li>
+        </ul>
+        </div>
+      </div>
+      </div>
+    </nav>
+
+  </div></div></header>
+  <div class="content">
+    <div class="wrapper">
+
+  <section class="light"><div class="section-wrapper"><div class="columns">
+    <div>
+      <h1>Decentralized Financial Stability Forum</h1>
+      <h3>A community research collaboration on the science of decentralized financial system risk, prevention, and mitigation.</h3>
+    </div>
+    <div>
+      <div class='hero-info'>
+        <p>
+          <strong>Upcoming Event</strong>
+          <p>
+            <a href="#">Science of Decentralized Financial Stability</a> (date TBA)
+            <p>An affiliated event with the <a href="https://cbr.stanford.edu/sbc23/">Science of Blockchain Conference at Stanford</a>, Aug. 28 - 30, 2023.</p>
+            <br><a href='https://forms.gle/bYmrVmBNYVanSX9e8'>Register here</a>
+          </p>
+        </p>
+      </div>
+      <div class='hero-info'>
+        <p>
+          <strong>Research</strong>
+        </p>
+      	<p>
+          <strong>Github:</strong>
+          <a href="https://github.com/dfsforum/">DFSForum</a>
+        </p>
+      	<p>
+          <strong>Zotero:</strong>
+          <a href="https://www.zotero.org/groups/dfsforum">DFSForum</a>
+        </p>
+      </div>
+      <div class='hero-info'>
+        <p>
+          <strong>Community</strong>
+        </p>
+      	<p>
+          <strong>Google Groups:</strong>
+          <a href="https://groups.google.com/u/3/g/dfsforum">dfsforum</a>
+        </p>
+      	<p>
+          <strong>Reddit:</strong>
+          <a href="https://reddit.com/r/dfsforum">/r/dfsforum</a>
+        </p>
+      	<p>
+          <strong>Telegram:</strong>
+          <a href="https://t.me/dfsforum">@dfsforum</a>
+        </p>
+      	<p>
+          <strong>Twitter:</strong>
+          <a href="https://twitter.com/dfsforum">@dfsforum</a>
+        </p>
+        <!--<p>
+          <strong>Discord:</strong>
+          <a href='/discord'>dfsforum on Discord</a>
+        </p>-->
+        <!--<p>
+          <strong>IRC:</strong>
+          <a href='https://web.libera.chat#dfsforum'>#dfsforum on Libera Chat</a>
+        </p>
+         <p>
+          <strong>Matrix↔IRC Bridge:</strong>
+          <a href='https://matrix.to/#/#dfsforum:libera.chat'>#dfsforum:libera.chat</a>
+         </p>-->
+      </div>
+    </div>
+  </div></div></section>
+
+  <section id="about" class="default"><div class="section-wrapper"><div class="columns">
+    <div>
+      <h2 id="about">ABOUT</h2>
+      <p>There are numerous <a href="https://en.wikipedia.org/wiki/Financial_crisis#Types">types of financial crises</a> that can affect an economy, with variying degrees of severity and economic damage.  However, the kinds of systemic and contagion risks that affect the decentralized financial ecosystem differ notably in some ways from those of the contemporary banking and financial system.</p>
+      <p>On one hand, blockchains are susceptible to previously unknown risks like failures in their distributed consensus mechanisms, their foundation, which can negatively impact all connected and dependent services.  On the other, inherent design aspects and limitations necessitate substantial collateral buffers that could prevent or mitigate the kind of cascading contagions that caused both the Great Depression and Global Financial Crisis.</p>
+      <p>Such risks in the contemporary financial system are extensively studied in both industry and academia.  Some of that knowledge and understanding may be applicable to decentralized financial systems, but some aspects of these systems may require new original research to fully comprehend and make sound judgements about.</p>
+      <p>As of 2023, we have, for the first time since the 2009 invention of Bitcoin, empirical data on the behavior of the decentralized financial ecosystem during a time of broader economic stress - namely a global pandemic, rising inflation, and the corresponding policy response of credit and monetary contraction.  It is worth taking this opportunity to study both the data and theory of decentralized financial system risk, and more fully develop it into a useful science.
+      <p>We aim to contribute to that objective by facilitating, coordinating, highlighting and supporting research on this subject, in both industry and academia.
+    </div>
+
+    <div>
+      <h2>OBJECTIVES</h2>
+      <ul style="ul.type='disc'">
+        <li>Treat the study of systemic risk as much an engineering problem as an economic one.  Investigate ways in which engineered solutions can mitigate or eliminate root causes of major financial crises in decentralized systems.</li>
+        <hr />
+        <li>Help identify, understand, publicize, and mitigate new risk vectors before they occur.</li>
+        <hr />
+        <li>Foster conversations about risk mitigations and analysis that are easier done in person than online, at conference events and other venues.</li>
+        <hr />
+        <li>Understand ways in which research results on contemporary financial system risk are applicable to the decentralized ecosystem, where possible.</li>
+        <hr />
+        <li>Encourage more publication within this area, of research useful in protocol design, implementation, and governance, as well as in policy analsys and advocacy.</li>
+        <hr />
+        <li>Provide a community hub for comprehensive information and resources on this subject.</li>
+      </ul>
+      <hr />
+      <br />
+      <br />
+      <h2>SCOPE</h2>
+      <ul>
+        <li>Our focus is on systemic risks in decentralized protocol design, implementation, and governance.</li>
+        <hr />
+        <li>Risks in Layer 1s, e.g. consensus failure, Proof-of-Work mining economics, Proof-of-Stake staking concentration, MEV, derivatives, etc.</li>
+        <hr />
+        <li>Risks in <a href="https://en.wikipedia.org/wiki/Decentralized_finance">DeFi</a>, e.g. smart contract bugs, mechanism design, collateralization, etc.</li>
+        <hr />
+        <li>Risks in communication layers, e.g. network layer, bridging, rollups, etc.</li>
+        <hr />
+        <li>Risk mitigation via new technologies or methods: ZK, better quantitative modeling</li>
+        <hr />
+        <li>Software integrity and assurance, elimination of attack surface via formal methods and other advanced software engineering techniques</li>
+        <hr />
+        <li>We will also consider the impact of concentrated and/or large centralized entities on decentralized networks.</li>
+    </ul>
+    </div>
+  </div></div></section>
+
+  <section class="light"><div class="section-wrapper"><div>
+    <h2 id="events">EVENTS</h2>
+
+    <ul class="notes">
+      <li>
+        <b>Science of Decentralized Financial Stability</b>
+        <br /><b>Date:</b> TBA
+        <br />An affiliated event with the <a href="https://cbr.stanford.edu/sbc23/">Science of Blockchain Conference at Stanford</a>, Aug. 28 - 30, 2023.
+        <br /><a href='https://forms.gle/bYmrVmBNYVanSX9e8'>Register here</a>
+      </li>
+    </ul>
+  </div></div></section>
+
+  <section class="default"><div class="section-wrapper"><div class="columns">
+    <div>
+      <h2 id="team">TEAM</h2>
+      <p>TBA</p>
+    </div>
+    <div>
+      <!--<div class='faucet-cta'>
+        <h3>Name</h3>
+        <div class='columns'>
+          Image
+        </div>
+        </p>
+      </div>-->
+    </div>
+  </div></div></section>
+  </div>
+</div>
+
+<footer id='footer'>
+<!-- the onboarding pages and dashboard use the small footer -->
+
+<div class='footer-wrap'>
+  <nav>
+    <div class='header'>
+      <h3>DFSForum</h3>
+      <span><img class='footer-caret-down' src='/img/footer/down-caret.svg' alt='Toggle expanded menu on mobile'/></span>
+      <span><img class='footer-caret-up hide' src='/img/footer/up-caret.svg' alt='Toggle expanded menu on mobile'/></span>
+    </div>
+    <div class='links'>
+      <a href='/'>Home</a>
+      <a href='/#events'>Events</a>
+      <a href='/#team'>Team</a>
+    </div>
+  </nav>
+
+  <nav>
+    <div class='header'>
+      <h3>Learn</h3>
+      <span><img class='footer-caret-down' src='/img/footer/down-caret.svg' alt='Toggle expanded menu on mobile'/></span>
+      <span><img class='footer-caret-up hide' src='/img/footer/up-caret.svg' alt='Toggle expanded menu on mobile'/></span>
+    </div>
+    <div class='links'>
+      <a href='/'>Github</a>
+      <a href='/'>Zotero</a>
+    </div>
+  </nav>
+
+  <nav>
+    <div class='header'>
+      <h3>Community</h3>
+      <span><img class='footer-caret-down' src='/img/footer/down-caret.svg' alt='Toggle expanded menu on mobile'/></span>
+      <span><img class='footer-caret-up hide' src='/img/footer/up-caret.svg' alt='Toggle expanded menu on mobile'/></span>
+    </div>
+    <div class='links'>
+      <a href="https://groups.google.com/u/3/g/dfsforum">Google Group</a>
+      <a href="https://reddit.com/r/dfsforum">Reddit</a>
+      <a href="https://t.me/dfsforum">Telegram</a>
+      <a href="https://twitter.com/dfsforum">Twitter</a>
+    </div>
+  </nav>
+
+  <!-- Keeps things in line -->
+  <nav style="display:none;">
+  </nav>
+
+</div><!-- close center-wrap -->
+<div class='footer-wrap bottom-wrap'>
+  &nbsp; &nbsp; &nbsp; &nbsp;
+  <!--<a href='/'>
+    Home
+  </a>
+  <a href='/terms-of-use'>
+    Terms of Use
+  </a>
+  <a href='/privacy-policy'>
+      Privacy Policy
+  </a>
+  <a href='/trademark-disclaimer'>
+      Trademark Disclaimer
+  </a>-->
+
+  <nav class='social-icons-small-footer'>
+    <a href='https://github.com/dfsforum/'>
+      <img src='/img/footer/github.svg' alt='GitHub logo'/>
+    </a>
+    <a href='https://twitter.com/dfsforum'>
+      <img src='/img/footer/twitter.svg' alt='Twitter logo'/>
+    </a>
+    <a href='https://reddit.com/r/dfsforum'>
+      <img src='/img/footer/reddit.svg' alt='Reddit logo'/>
+    </a>
+  </nav>
+</div>
+
+</footer>
+<!-- footer --
+
+<!-- license -->
+<!-- <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="http://DSSForum.org">Decentralized Systems Stability Forum</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="http://DSSForum.org">DSSForum.org</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p> -->
+
+<!-- /footer -->
+
+<!-- scripts -->
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/vendor/jquery-3.7.0.min.js"></script>
+<!-- <script src="js/plugins.js"></script> -->
+<!-- <script src="js/main.js"></script>  -->
+<script src='/js/footer.js'></script>
+<script src='/js/nav.js'></script>
+<script>
+  window.addEventListener("load", function(e) {
+    document.documentElement.className = '';
+  });
+</script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto'); ga('set', 'anonymizeIp', true); ga('set', 'transport', 'beacon'); ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async></script>
 
 </body>
 
