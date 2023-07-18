@@ -1,6 +1,6 @@
-# dssforum.github.io.src
+# dfsforum.github.io.src
 
-DSSForum.org source and build info.
+DFSForum.org source and build info.
 
 Using [Deno](https://deno.land/) and the [Lume](https://lume.land) static site generator.
 
