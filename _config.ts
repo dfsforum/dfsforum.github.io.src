@@ -42,6 +42,7 @@ site.copy("favicon.ico");
 site.copy("favicon-16x16.png");
 site.copy("favicon-32x32.png");
 site.copy("apple-touch-icon.png");
+site.copy("apple-touch-icon.png", "icon.png");
 site.copy("android-chrome-192x192.png");
 site.copy("android-chrome-512x512.png");
 site.copy("humans.txt");
