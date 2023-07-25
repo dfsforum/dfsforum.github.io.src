@@ -8,10 +8,9 @@ pkgs.mkShell {
   ];
   shellHook = ''
     #alias ls=exa
-    alias find=fd
     #alias ls="ls -alh --color=auto"
     alias ls="exa --long --group --header -a --classify --links --level=3 --color=auto --sort=type --time-style=long-iso --extended"
-    #alias find="fd"
+    alias find=fd
     alias fd="fd --hidden --list-details --color=auto" # cannot be aliased to 'find' if using hlissner doom emacs
     #alias fd="fd --hidden --no-ignore --follow --list-details --color=auto" # cannot be aliased to 'find' if using hlissner doom emacs
     #alias fd="find -L" # cannot be aliased if using hlissner doom emacs
