@@ -1,4 +1,10 @@
 import lume from "lume/mod.ts";
+
+//import * as lume from "https://deno.land/x/lume@v1.18.1/plugins/vento.ts";
+//import vento from "https://deno.land/x/lume@v1.18.1/plugins/vento.ts";
+//import vento from "https://deno.land/x/vento@v0.6.0/mod.ts";
+import vento from "lume/plugins/vento.ts";
+
 //import remark from "lume/plugins/remark.ts"; // many nodejs dependencies, broken node package
 import tailwindcss from "lume/plugins/tailwindcss.ts";
 import postcss from "lume/plugins/postcss.ts";
@@ -51,6 +57,7 @@ site.copy("site.webmanifest");
 // site.copy("browserconfig.xml");
 site.copy("README.prod.md", "README.md");
 
+site.use(vento());
 //site.use(remark()); // many nodejs dependencies, one broken node package
 site.use(tailwindcss());
 site.use(postcss());
