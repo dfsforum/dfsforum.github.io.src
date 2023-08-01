@@ -1,10 +1,16 @@
 {pkgs ? import <nixpkgs> {}}:
 pkgs.mkShell {
   buildInputs = with pkgs; [
-    deno
+    # common build inputs
+    direnv
     duf
     exa
     fd
+    # project-specific build inputs
+    deno
+    rustup
+    nodejs_20
+    nodePackages.pnpm
   ];
   shellHook = ''
     #alias ls=exa
@@ -27,5 +33,12 @@ pkgs.mkShell {
     alias gp="git push -u"
     alias gpu="git push -u"
 
-    export DENO_BIN="${pkgs.deno}/bin/deno"'';
+    #import parent shell config
+    [ -x ~/.bashrc ] && source ~/.bashrc
+    [ -x ~/.zshrc ] && source ~/.zshrc
+
+    # export envars
+    #export DENO_BIN="${pkgs.deno}/bin/deno"
+    #export NODE_BIN="${pkgs.nodejs}/bin/nodejs"
+  '';
 }
