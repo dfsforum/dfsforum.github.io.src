@@ -6,19 +6,17 @@ Using [Deno](https://deno.land/) and the [Lume](https://lume.land) static site g
 
 Using [Direnv](https://direnv.net/) and [nix-direnv](https://github.com/nix-community/nix-direnv) build environements on NixOS.
 
-# Direnv setup on Nix/NixOS
-
 1. Install direnv and nix-direnv
 
-### See installation instructions for your OS here:
+See installation instructions for your OS here:
 
-#### https://github.com/direnv/
+https://github.com/direnv/
 
-#### https://github.com/nix-community/nix-direnv
+https://github.com/nix-community/nix-direnv
 
-### On NixOS, configure `/etc/nixos/configuration.nix` (or your nix flake) and rebuild
+On NixOS, configure `/etc/nixos/configuration.nix` (or your nix flake) and rebuild
 
-#### on NixOS 23.11 unstable and later:
+on NixOS 23.11 unstable and later:
 
 ````
 { pkgs, ... }: {
@@ -52,7 +50,7 @@ Using [Direnv](https://direnv.net/) and [nix-direnv](https://github.com/nix-comm
 }
 ````
 
-#### on NixOS 23.05 and earlier:
+on NixOS 23.05 and earlier:
 
 ````
 { pkgs, ... }: {
