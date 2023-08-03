@@ -1,0 +1,121 @@
+{{ layout "container.vto" }}
+
+<div class="content">
+  <div class="wrapper">
+
+  <section class="light"><div class="section-wrapper"><div class="columns">
+    <div>
+      <h1>Decentralized Financial Stability Forum</h1>
+      <h3>A community research collaboration on the science of decentralized financial system risk, prevention, and mitigation.</h3>
+    </div>
+    <div>
+      <div class='hero-info'>
+        <p>
+          <strong>Upcoming Event</strong>
+          <p>
+            <a href="https://forms.gle/bYmrVmBNYVanSX9e8">Science of Decentralized Financial Stability</a>, Friday, Sep. 1.
+            <p>Affiliated with the <a href="https://cbr.stanford.edu/sbc23/">Science of Blockchain Conference</a>, at Stanford University, Aug. 28 - 30, 2023.</p>
+            <br><a href="https://forms.gle/bYmrVmBNYVanSX9e8">Register here</a>
+          </p>
+        </p>
+      </div>
+      <div class='hero-info'>
+        <p>
+          <strong>Research</strong>
+        </p>
+      	<p>
+          <strong>Github:</strong>
+          <a href="https://github.com/dfsforum/">DFSForum</a>
+        </p>
+      	<p>
+          <strong>Zotero:</strong>
+          <a href="https://www.zotero.org/groups/dfsforum">DFSForum</a>
+        </p>
+      </div>
+      <div class='hero-info'>
+        <p>
+          <strong>Community</strong>
+        </p>
+      	<p>
+          <strong>Google Groups:</strong>
+          <a href="https://groups.google.com/u/3/g/dfsforum">dfsforum</a>
+        </p>
+      	<p>
+          <strong>Reddit:</strong>
+          <a href="https://reddit.com/r/dfsforum">/r/dfsforum</a>
+        </p>
+      	<p>
+          <strong>Telegram:</strong>
+          <a href="https://t.me/dfsforum">@dfsforum</a>
+        </p>
+      	<p>
+          <strong>Twitter:</strong>
+          <a href="https://twitter.com/dfsforum">@dfsforum</a>
+        </p>
+        <!--<p>
+          <strong>Discord:</strong>
+          <a href='/discord'>dfsforum on Discord</a>
+        </p>-->
+        <!--<p>
+          <strong>IRC:</strong>
+          <a href='https://web.libera.chat#dfsforum'>#dfsforum on Libera Chat</a>
+        </p>
+         <p>
+          <strong>Matrix↔IRC Bridge:</strong>
+          <a href='https://matrix.to/#/#dfsforum:libera.chat'>#dfsforum:libera.chat</a>
+         </p>-->
+      </div>
+    </div>
+  </div></div></section>
+
+  <section id="about" class="default"><div class="section-wrapper"><div class="columns">
+    <div>
+      <h2 id="about">ABOUT</h2>
+      <p>There are numerous <a href="https://en.wikipedia.org/wiki/Financial_crisis#Types">types of financial crises</a> that can affect an economy, with variying degrees of severity and economic damage.  However, the kinds of systemic and contagion risks that affect the decentralized financial ecosystem differ notably in some ways from those of the contemporary banking and financial system.</p>
+      <p>On one hand, blockchains are susceptible to previously unknown risks like failures in their distributed consensus mechanisms, their foundation, which can negatively impact all connected and dependent services.  On the other, inherent design constraints necessitate substantial collateral buffers that could impede or mitigate the propogation of contagions through the ecosystem.</p>
+      <p>Such risks in the contemporary financial system are extensively studied in both industry and academia.  Some of that knowledge and understanding may be applicable to decentralized financial systems, but some aspects of these systems may require new original research to fully comprehend.</p>
+      <p>As of 2023, we have, for the first time since the 2009 invention of Bitcoin, empirical data on the behavior of the decentralized financial ecosystem during a time of broader economic stress - namely a global pandemic, rising inflation, and credit and monetary contraction.  It is worth taking this opportunity to study both the empircal and theoretical nature of decentralized financial system risk, and more fully develop it into a useful science.
+      <p>We aim to contribute to that objective by facilitating, coordinating, highlighting and supporting research on this subject.
+    </div>
+
+    <div>
+      <h2>OBJECTIVES</h2>
+      <ul style="ul.type='disc'">
+        <li>Treat the study of systemic risk as much an engineering problem as an economic one.  Investigate ways in which engineered solutions can mitigate or eliminate root causes of potential financial crises in decentralized systems.</li>
+        <hr />
+        <li>Help identify, understand, publicize, and mitigate new risk vectors before they occur.</li>
+        <hr />
+        <li>Foster conversations about risk mitigations and analysis that are easier done in person than online, at conference events and other venues.</li>
+        <hr />
+        <li>Understand ways in which research results on contemporary financial system risk are applicable to the decentralized ecosystem, where possible.</li>
+        <hr />
+        <li>Encourage more publication within this area, including research useful in protocol design, implementation, and governance, as well as in policy analysis and advocacy.</li>
+        <hr />
+        <li>Provide a community hub for comprehensive information and resources on this subject.</li>
+      </ul>
+      <hr />
+      <br />
+      <br />
+      <h2>SCOPE</h2>
+      <ul>
+        <li>Our focus is on systemic risks in decentralized protocol design, implementation, and governance.</li>
+        <hr />
+        <li><strong>Blockchain Protocols and Layer 1's:</strong> consensus failure, Proof-of-Work mining economics, Proof-of-Stake staking concentration, MEV, derivatives, etc.</li>
+        <hr />
+        <li><strong>Communication layers:</strong> network layer, bridging, rollups, etc.</li>
+        <hr />
+        <li><strong>DeFi:</strong> smart contract bugs, mechanism design, collateralization, etc.</li>
+        <hr />
+        <li><strong>Risk mitigation via new technologies or methods:</strong> ZK, better quantitative modeling, etc.</li>
+        <hr />
+        <li><strong>Software integrity and assurance:</strong> formal methods and other advanced techniques for eliminating system failures or breaches due to software errors.</li>
+        <hr />
+        <li>We will also consider concentrated and/or large centralized entities to the extent they impact the decentralized ecosystem.</li>
+      </ul>
+    </div>
+  </div></div></section>
+
+  </div><!-- /wrapper -->
+</div><!-- /content -->
+
+{{ /layout }}
