@@ -1,0 +1,186 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+  <meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+  <meta property="og:title" content="{{ title }}" />
+  <meta property="og:description" content="{{ description }}" />
+  <meta property="og:type" content="{{ type }}" />
+  <meta property="og:url" content="{{ url_prod }}" />
+  <meta property="og:image" content="{{ image_logo }}" />
+
+  <link rel="manifest" href="site.webmanifest" />
+  <link rel="apple-touch-icon" href="icon.png" />
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" type="text/css" href="css/fonts/nitti.css" />
+  <link rel="stylesheet" type="text/css" href="css/fonts/ibmplexmono.css" />
+  <link rel="stylesheet" type="text/css" href="css/fonts/ibmplexsans.css" />
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel="stylesheet" type="text/css" href="css/custom.css" />
+  <link rel="stylesheet" type="text/css" href="css/footer.css" />
+
+  <style type="text/css">
+    .no-fouc {display: none;}
+  </style>
+
+  <script type="text/javascript">
+    document.documentElement.className = 'no-fouc';
+  </script>
+
+  <!-- <meta name="theme-color" content="#fafafa">-->
+</head>
+
+<body class="landing">
+
+  <header><div class="header-wrapper"><div class="inner-wrapper">
+    <nav id="navBar" class="no-js nav-bar">
+      <div id='nav-toggle' class="burgermenu" href="#">☰</div>
+      <div id='overlay'></div>
+      <div id="burgernav">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#team">Team</a></li>
+      </ul>
+      </div>
+
+      <a class="nav-logo" href="/">
+        <img class='logo logo-dark' src='/img/landing/dfsforum_235x49.png' /><img class='logo logo-light' src='/img/landing/dfsforum_235x49.png' />
+      </a>
+
+      <div class="nav-right ">
+      <div class="nav-links ">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#events">Events</a></li>
+          <li><a href="#team">Team</a></li>
+        </ul>
+        </div>
+      </div>
+      </div>
+    </nav>
+
+  </div></div></header>
+
+<div class="container">
+{{ content }}
+</div>
+
+<footer id='footer'>
+<!-- the onboarding pages and dashboard use the small footer -->
+
+<div class='footer-wrap'>
+  <nav>
+    <div class='header'>
+      <h3>DFSForum</h3>
+      <span><img class='footer-caret-down' src='/img/footer/down-caret.svg' alt='Toggle expanded menu on mobile'/></span>
+      <span><img class='footer-caret-up hide' src='/img/footer/up-caret.svg' alt='Toggle expanded menu on mobile'/></span>
+    </div>
+    <div class='links'>
+      <a href='/'>Home</a>
+      <a href='/#events'>Events</a>
+      <a href='/#team'>Team</a>
+    </div>
+  </nav>
+
+  <nav>
+    <div class='header'>
+      <h3>Learn</h3>
+      <span><img class='footer-caret-down' src='/img/footer/down-caret.svg' alt='Toggle expanded menu on mobile'/></span>
+      <span><img class='footer-caret-up hide' src='/img/footer/up-caret.svg' alt='Toggle expanded menu on mobile'/></span>
+    </div>
+    <div class='links'>
+      <a href='/'>Github</a>
+      <a href='/'>Zotero</a>
+    </div>
+  </nav>
+
+  <nav>
+    <div class='header'>
+      <h3>Community</h3>
+      <span><img class='footer-caret-down' src='/img/footer/down-caret.svg' alt='Toggle expanded menu on mobile'/></span>
+      <span><img class='footer-caret-up hide' src='/img/footer/up-caret.svg' alt='Toggle expanded menu on mobile'/></span>
+    </div>
+    <div class='links'>
+      <a href="https://groups.google.com/u/3/g/dfsforum">Google Group</a>
+      <a href="https://reddit.com/r/dfsforum">Reddit</a>
+      <a href="https://t.me/dfsforum">Telegram</a>
+      <a href="https://twitter.com/dfsforum">Twitter</a>
+    </div>
+  </nav>
+
+  <!-- Keeps things in line -->
+  <nav style="display:none;">
+  </nav>
+
+</div><!-- close center-wrap -->
+<div class='footer-wrap bottom-wrap'>
+  &nbsp; &nbsp; &nbsp; &nbsp;
+  <!--<a href='/'>
+    Home
+  </a>
+  <a href='/terms-of-use'>
+    Terms of Use
+  </a>
+  <a href='/privacy-policy'>
+      Privacy Policy
+  </a>
+  <a href='/trademark-disclaimer'>
+      Trademark Disclaimer
+  </a>-->
+
+  <nav class='social-icons-small-footer'>
+    <a href='https://github.com/dfsforum/'>
+      <img src='/img/footer/github.svg' alt='GitHub logo'/>
+    </a>
+    <a href='https://twitter.com/dfsforum'>
+      <img src='/img/footer/twitter.svg' alt='Twitter logo'/>
+    </a>
+    <a href='https://reddit.com/r/dfsforum'>
+      <img src='/img/footer/reddit.svg' alt='Reddit logo'/>
+    </a>
+  </nav>
+</div>
+
+</footer>
+<!-- footer --
+
+<!-- license -->
+<!-- <p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="http://DSSForum.org">Decentralized Systems Stability Forum</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="http://DSSForum.org">DSSForum.org</a> is licensed under <a href="http://creativecommons.org/licenses/by/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">CC BY 4.0<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"></a></p> -->
+
+<!-- /footer -->
+
+<!-- scripts -->
+<script src="js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="js/vendor/jquery-3.7.0.min.js"></script>
+<!-- <script src="js/plugins.js"></script> -->
+<!-- <script src="js/main.js"></script>  -->
+<script src='/js/footer.js'></script>
+<script src='/js/nav.js'></script>
+<script>
+  window.addEventListener("load", function(e) {
+    document.documentElement.className = '';
+  });
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-K6TR9TR8F3"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-K6TR9TR8F3');
+</script>
+
+</body>
+
+</html>
