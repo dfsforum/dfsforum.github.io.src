@@ -8,10 +8,10 @@ pkgs.mkShell {
     exa
     fd
     # project-specific build inputs
-    #deno
-    #rustup
-    #nodejs
-    #nodePackages.pnpm
+    deno
+    rustup
+    nodejs
+    nodePackages.pnpm
   ];
   shellHook = ''
     #alias ls=exa
@@ -39,7 +39,9 @@ pkgs.mkShell {
     [ -x ~/.zshrc ] && source ~/.zshrc
 
     # export envars
-    #export DENO_BIN="${pkgs.deno}/bin/deno"
-    #export NODE_BIN="${pkgs.nodejs}/bin/nodejs"
+    export DENO_BIN="${pkgs.deno}/bin/deno"
+    #export PATH="${pkgs.deno}/bin/deno:$PATH"
+    export NODE_BIN="${pkgs.nodejs}/bin/nodejs"
+    #export PATH="${pkgs.nodejs}/bin/nodejs:$PATH"
   '';
 }

@@ -124,9 +124,9 @@ pkgs.mkShell {
 
     # export envars
     export DENO_BIN="${pkgs.deno}/bin/deno"
-    export PATH="${DENO_BIN}:$PATH"
+    #export PATH="${pkgs.deno}/bin/deno:$PATH"
     #export NODE_BIN="${pkgs.nodejs}/bin/nodejs"
-    #export PATH="${NODE_BIN}:$PATH"
+    #export PATH="${pkgs.nodejs}/bin/nodejs:$PATH"
   '';
 }
 EOF
