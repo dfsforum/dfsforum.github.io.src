@@ -10,13 +10,15 @@ Using [Direnv](https://direnv.net/) and [nix-direnv](https://github.com/nix-comm
 
 1. Install direnv and nix-direnv
 
--- See installation instructions for your OS here:
----- https://github.com/direnv/
----- https://github.com/nix-community/nix-direnv
+### See installation instructions for your OS here:
 
--- On NixOS, configure `/etc/nixos/configuration.nix` (or your nix flake) and rebuild
+#### https://github.com/direnv/
 
----- on NixOS 23.11 unstable and later:
+#### https://github.com/nix-community/nix-direnv
+
+### On NixOS, configure `/etc/nixos/configuration.nix` (or your nix flake) and rebuild
+
+#### on NixOS 23.11 unstable and later:
 
 ````
 { pkgs, ... }: {
@@ -50,7 +52,7 @@ Using [Direnv](https://direnv.net/) and [nix-direnv](https://github.com/nix-comm
 }
 ````
 
----- on NixOS 23.05 and earlier:
+#### on NixOS 23.05 and earlier:
 
 ````
 { pkgs, ... }: {
@@ -82,17 +84,17 @@ Using [Direnv](https://direnv.net/) and [nix-direnv](https://github.com/nix-comm
 }
 ````
 
--- `echo "source /run/current-system/sw/share/nix-direnv/direnvrc" >> ~/.config/direnv/direnvrc`
+`echo "source /run/current-system/sw/share/nix-direnv/direnvrc" >> ~/.config/direnv/direnvrc`
 
--- `echo 'eval "$(direnv hook zsh)"'` >> ~/.zshrc or (~/.bashrc, see install links above for other shells)
+`echo 'eval "$(direnv hook zsh)"'` >> ~/.zshrc or (~/.bashrc, see install links above for other shells)
 
--- `source ~/.zshrc`
+`source ~/.zshrc`
 
 2. Create a direnv project directory for this project with Deno installed
 
--- `mdkir <project-directory>`
+`mdkir <project-directory>`
 
--- create `default.nix` or `shell.nix` that loads Deno and anything else you want:
+create `default.nix` or `shell.nix` that loads Deno and anything else you want:
 
 ````
 cat > default.nix<<EOF
@@ -132,20 +134,20 @@ pkgs.mkShell {
 EOF
 ````
 
--- `echo "use nix" >> .envrc' (or "use flake" if you're using Nix Flakes)
+`echo "use nix" >> .envrc' (or "use flake" if you're using Nix Flakes)
 
--- `direnv allow`
+`direnv allow`
 
--- `cd ..` (to unload direnv)
+`cd ..` (to unload direnv)
 
--- `cd <projectdir>` (to reload direnv)
+`cd <projectdir>` (to reload direnv)
 
--- `deno --version` to test
+`deno --version` to test
 
 3.  Install Lume in project directory
 
--- `deno run -Ar https://deno.land/x/lume/init.ts` to install Lume
+`deno run -Ar https://deno.land/x/lume/init.ts` to install Lume
 
--- `deno install --allow-run --name lume --force --reload https://deno.land/x/lume_cli/mod.ts` to setup Lume CLI
+`deno install --allow-run --name lume --force --reload https://deno.land/x/lume_cli/mod.ts` to setup Lume CLI
 
--- `lume -s` to test
+`lume -s` to test
