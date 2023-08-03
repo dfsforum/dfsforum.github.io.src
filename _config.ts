@@ -7,10 +7,27 @@ import vento from "lume/plugins/vento.ts";
 
 const site = lume({
   dest: "../dfsforum.github.io",
-
+  prettyUrls: false,
+  //page404: "./not-found.html",  
   // replace relative links with absolute:
-  // location: new URL("https://dfsforum.org/"),
-
+  //location: new URL("https://dfsforum.org/"),
+  watcher: {
+    //debounce: 10, //defaul = 100
+    ignore: [
+      "vim",
+      //"./ignored-folder/",
+      //"./ignored-file.txt",
+      //(path) => path.endsWith(".foo"), // ignore extension
+    ],
+  }, 
+  //components: {
+  //  variable: "comp",
+  //  cssFile: "/components.css",
+  //  jsFile: "/components.js",
+  //},  
+  //middleware: [
+  //  expires(),
+  //],
 });
 
 // Ignore files and directories not part of the deployed site. All files and
