@@ -84,13 +84,13 @@ on NixOS 23.05 and earlier:
 
 `echo "source /run/current-system/sw/share/nix-direnv/direnvrc" >> ~/.config/direnv/direnvrc`
 
-`echo 'eval "$(direnv hook zsh)"'` >> ~/.zshrc or (~/.bashrc, see install links above for other shells)
+`echo 'eval "$(direnv hook zsh)"' >> /.zshrc` (or \~/.bashrc, see install links above for other shells)
 
 `source ~/.zshrc`
 
 #### 2. Create a direnv project directory for this project with Deno installed
 
-`mdkir <project-directory>`
+`mdkir <project-directory> && cd "$_"`
 
 create `default.nix` or `shell.nix` that loads Deno and anything else you want:
 
@@ -132,7 +132,7 @@ pkgs.mkShell {
 EOF
 ````
 
-`echo "use nix" >> .envrc' (or "use flake" if you're using Nix Flakes)
+`echo "use nix" >> .envrc` (or "use flake" if you're using Nix Flakes)
 
 `direnv allow`
 
@@ -149,3 +149,7 @@ EOF
 `deno install --allow-run --name lume --force --reload https://deno.land/x/lume_cli/mod.ts` to setup Lume CLI
 
 `lume -s` to test
+
+`deno task lume -s` to run the hot-reloading dev server
+
+Begin coding your site.
