@@ -1,19 +1,15 @@
 import lume from "lume/mod.ts";
-
-//import * as lume from "https://deno.land/x/lume@v1.18.1/plugins/vento.ts";
-//import vento from "https://deno.land/x/lume@v1.18.1/plugins/vento.ts";
-//import vento from "https://deno.land/x/vento@v0.6.0/mod.ts";
 import vento from "lume/plugins/vento.ts";
 
 //import remark from "lume/plugins/remark.ts"; // many nodejs dependencies, broken node package
-import tailwindcss from "lume/plugins/tailwindcss.ts";
-import postcss from "lume/plugins/postcss.ts";
+//import tailwindcss from "lume/plugins/tailwindcss.ts";
+//import postcss from "lume/plugins/postcss.ts";
 
 const site = lume({
   dest: "../dfsforum.github.io",
 
   // replace relative links with absolute:
-  // location: new URL("https://dssforum.org/"),
+  // location: new URL("https://dfsforum.org/"),
 
 });
 
@@ -30,7 +26,11 @@ site.ignore("404.md");
 site.ignore("browserconfig.xml");
 site.ignore("vendor");
 site.ignore("_vendor");
+site.ignore("archive");
+site.ignore("_archive");
 site.ignore("vim");
+site.ignore("vim~");
+site.ignore("vim~/");
 site.ignore("node_modules");
 site.ignore("README.md");
 site.ignore("LICENSE.txt");
@@ -41,6 +41,7 @@ site.ignore("SETUP.md");
 // files/dirs beginning with . or _.  Copied files are never processed, even
 // if they have a known extension like .md or .njk.
 site.copy("js/");
+site.copy("css/");
 site.copy("img/");
 site.copy("fonts/");
 site.copy("icon.png");
@@ -59,7 +60,7 @@ site.copy("README.prod.md", "README.md");
 
 site.use(vento());
 //site.use(remark()); // many nodejs dependencies, one broken node package
-site.use(tailwindcss());
-site.use(postcss());
+//site.use(tailwindcss());
+//site.use(postcss());
 
 export default site;
