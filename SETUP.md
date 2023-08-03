@@ -6,7 +6,7 @@ Using [Deno](https://deno.land/) and the [Lume](https://lume.land) static site g
 
 Using [Direnv](https://direnv.net/) and [nix-direnv](https://github.com/nix-community/nix-direnv) build environements on NixOS.
 
-1. Install direnv and nix-direnv
+#### 1. Install direnv and nix-direnv
 
 See installation instructions for your OS here:
 
@@ -88,7 +88,7 @@ on NixOS 23.05 and earlier:
 
 `source ~/.zshrc`
 
-2. Create a direnv project directory for this project with Deno installed
+#### 2. Create a direnv project directory for this project with Deno installed
 
 `mdkir <project-directory>`
 
@@ -142,7 +142,7 @@ EOF
 
 `deno --version` to test
 
-3.  Install Lume in project directory
+#### 3.  Install Lume in project directory
 
 `deno run -Ar https://deno.land/x/lume/init.ts` to install Lume
 
