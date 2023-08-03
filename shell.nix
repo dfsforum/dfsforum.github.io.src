@@ -1,7 +1,8 @@
 {pkgs ? import <nixpkgs> {}}:
 pkgs.mkShell {
   nativeBuildInputs = with pkgs; [
-    bashInteractive
+    #bashInteractive
+    zsh
   ];
   buildInputs = with pkgs; [
     # common build inputs
