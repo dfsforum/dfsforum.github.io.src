@@ -6,27 +6,75 @@ Using [Deno](https://deno.land/) and the [Lume](https://lume.land) static site g
 
 Using [Direnv](https://direnv.net/) and [nix-direnv](https://github.com/nix-community/nix-direnv) build environements on NixOS.
 
-# Direnv setup on Nix
+# Direnv setup on Nix/NixOS
 
 1. Install direnv and nix-direnv
 
-https://github.com/direnv/direnv/wiki/Nix
+-- See installation instructions for your OS here:
+---- https://github.com/direnv/
+---- https://github.com/nix-community/nix-direnv
 
-https://github.com/nix-community/nix-direnv
+-- On NixOS, configure `/etc/nixos/configuration.nix` (or your nix flake) and rebuild
 
--- configure configuration.nix as such and rebuild:
+---- on NixOS 23.11 unstable and later:
 
 ````
 { pkgs, ... }: {
-  environment.systemPackages = with pkgs; [ direnv nix-direnv ];
+
+  programs.direnv = {
+    enable = true;
+    package = pkgs.direnv;
+    silent = false;
+    persistDerivations = true;
+    loadInNixShell = true;
+    direnvrcExtra = "";
+    nix-direnv = {
+      enable = true;
+      package = pkgs.nix-direnv;
+    };
+  };
+
   # nix options for derivations to persist garbage collection
   nix.settings = {
+    ...
     keep-outputs = true;
     keep-derivations = true;
+    ...
   };
+
   environment.pathsToLink = [
+    ...
     "/share/nix-direnv"
+    ...
   ];
+}
+````
+
+---- on NixOS 23.05 and earlier:
+
+````
+{ pkgs, ... }: {
+  environment.systemPackages = with pkgs; [ 
+    ...
+    direnv
+    nix-direnv
+    ...
+  ];
+
+  # nix options for derivations to persist garbage collection
+  nix.settings = {
+    ...
+    keep-outputs = true;
+    keep-derivations = true;
+    ...
+  };
+
+  environment.pathsToLink = [
+    ...
+    "/share/nix-direnv"
+    ...
+  ];
+
   # if you also want support for flakes
   nixpkgs.overlays = [
     (self: super: { nix-direnv = super.nix-direnv.override { enableFlakes = true; }; } )
@@ -34,28 +82,54 @@ https://github.com/nix-community/nix-direnv
 }
 ````
 
--- run `cp /run/current-system/sw/share/nix-direnv/direnvrc ~/.config/direnv/direnvrc`
+-- `echo "source /run/current-system/sw/share/nix-direnv/direnvrc" >> ~/.config/direnv/direnvrc`
 
--- run `source ~/.config/direnv/direnvrc`
+-- `echo 'eval "$(direnv hook zsh)"'` >> ~/.zshrc or (~/.bashrc, see install links above for other shells)
 
--- add `eval "$(direnv hook zsh)"` to ~/.zshrc
-
--- run `source ~/.zshrc`
+-- `source ~/.zshrc`
 
 2. Create a direnv project directory for this project with Deno installed
 
--- create a project directory, cd into it
+-- `mdkir <project-directory>`
 
--- create a shell.nix that loads Deno:
+-- create `default.nix` or `shell.nix` that loads Deno and anything else you want:
 
 ````
+cat > default.nix<<EOF
 {pkgs ? import <nixpkgs> {}}:
 pkgs.mkShell {
-  buildInputs = with pkgs; [
-    deno
+  nativeBuildInputs = with pkgs; [
+    bashInteractive
   ];
-  shellHook = ''export DENO_BIN="${pkgs.deno}/bin/deno"'';
+  buildInputs = with pkgs; [
+    # common build inputs
+    direnv
+    xclip
+    exa
+    fd
+    # project-specific build inputs
+    deno
+    #rustup
+    #nodejs
+    #nodePackages.pnpm
+  ];
+  shellHook = ''
+    
+    # aliases
+    alias ls="exa --long --group --header -a --classify --links --level=3 --color=auto --sort=type --time-style=long-iso --extended"
+    alias find="fd --hidden --list-details --color=auto" 
+    
+    # optionally import parent shell config, or copy the desired subset into this shellHook section
+    [ -x ~/.zshrc ] && source ~/.zshrc
+
+    # export envars
+    export DENO_BIN="${pkgs.deno}/bin/deno"
+    export PATH="${DENO_BIN}:$PATH"
+    #export NODE_BIN="${pkgs.nodejs}/bin/nodejs"
+    #export PATH="${NODE_BIN}:$PATH"
+  '';
 }
+EOF
 ````
 
 -- `echo "use nix" >> .envrc' (or "use flake" if you're using Nix Flakes)
@@ -66,14 +140,12 @@ pkgs.mkShell {
 
 -- `cd <projectdir>` (to reload direnv)
 
--- run or add to .zshrc or .profile `export PATH="/home/<user>/.deno/bin:$PATH"`
+-- `deno --version` to test
 
--- run `deno --version` to test
+3.  Install Lume in project directory
 
-3.  Install Lume
+-- `deno run -Ar https://deno.land/x/lume/init.ts` to install Lume
 
--- run `deno run -Ar https://deno.land/x/lume/init.ts` to install Lume
+-- `deno install --allow-run --name lume --force --reload https://deno.land/x/lume_cli/mod.ts` to setup Lume CLI
 
--- run `deno install --allow-run --name lume --force --reload https://deno.land/x/lume_cli/mod.ts` to setup Lume CLI
-
--- run `lume -s` to test
+-- `lume -s` to test
