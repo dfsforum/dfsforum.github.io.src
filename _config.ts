@@ -5,8 +5,12 @@ import vento from "lume/plugins/vento.ts";
 //import tailwindcss from "lume/plugins/tailwindcss.ts";
 //import postcss from "lume/plugins/postcss.ts";
 
+const dest= "../dfsforum.github.io";
+
+// https://lume.land/docs/configuration/config-file/
 const site = lume({
-  dest: "../dfsforum.github.io",
+  dest: dest,
+  emptyDest: false,
   prettyUrls: false,
   //page404: "./not-found.html",  
   // replace relative links with absolute:
@@ -66,14 +70,17 @@ site.copy("favicon.ico");
 site.copy("favicon-16x16.png");
 site.copy("favicon-32x32.png");
 site.copy("apple-touch-icon.png");
-site.copy("apple-touch-icon.png", "icon.png");
 site.copy("android-chrome-192x192.png");
 site.copy("android-chrome-512x512.png");
+site.copy("CNAME");
 site.copy("humans.txt");
 site.copy("robots.txt");
 site.copy("site.webmanifest");
 // site.copy("browserconfig.xml");
 site.copy("README.prod.md", "README.md");
+
+// site.copy can only be used once per file, so must use event for subsequent copies
+//site.addEventListener("afterBuild", "cp img/apple-touch-icon.png _site/icon.png");
 
 site.use(vento());
 //site.use(remark()); // many nodejs dependencies, one broken node package
