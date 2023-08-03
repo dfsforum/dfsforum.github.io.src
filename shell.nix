@@ -1,16 +1,20 @@
 {pkgs ? import <nixpkgs> {}}:
 pkgs.mkShell {
+  nativeBuildInputs = with pkgs; [
+    bashInteractive
+  ];
   buildInputs = with pkgs; [
     # common build inputs
     direnv
+    xclip
     duf
     exa
     fd
     # project-specific build inputs
-    deno
-    rustup
-    nodejs_20
-    nodePackages.pnpm
+    #deno
+    #rustup
+    #nodejs
+    #nodePackages.pnpm
   ];
   shellHook = ''
     #alias ls=exa
