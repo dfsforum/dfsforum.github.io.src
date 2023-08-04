@@ -98,9 +98,6 @@ create `default.nix` or `shell.nix` that loads Deno and anything else you want:
 cat > default.nix<<EOF
 {pkgs ? import <nixpkgs> {}}:
 pkgs.mkShell {
-  nativeBuildInputs = with pkgs; [
-    bashInteractive
-  ];
   buildInputs = with pkgs; [
     # common build inputs
     direnv
@@ -123,10 +120,8 @@ pkgs.mkShell {
     [ -x ~/.zshrc ] && source ~/.zshrc
 
     # export envars
-    export DENO_BIN="${pkgs.deno}/bin/deno"
-    #export PATH="${pkgs.deno}/bin/deno:$PATH"
-    #export NODE_BIN="${pkgs.nodejs}/bin/nodejs"
-    #export PATH="${pkgs.nodejs}/bin/nodejs:$PATH"
+    export DENO_BIN="${pkgs.deno}/bin/"
+    #export NODE_BIN="${pkgs.nodejs}/bin/"
   '';
 }
 EOF
@@ -152,4 +147,4 @@ EOF
 
 `deno task lume -s` to run the hot-reloading dev server
 
-Begin coding your site.
+Begin coding.
