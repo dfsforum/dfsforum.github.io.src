@@ -35,7 +35,6 @@ pkgs.mkShell {
     alias gpu="git push -u"
 
     #import parent shell config
-    [ -x ~/.bashrc ] && source ~/.bashrc
     [ -x ~/.zshrc ] && source ~/.zshrc
 
     # export envars
