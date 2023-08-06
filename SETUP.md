@@ -2,9 +2,7 @@
 
 DFSForum.org source and build info.
 
-Using [Deno](https://deno.land/) and the [Lume](https://lume.land) static site generator.
-
-Using [Direnv](https://direnv.net/) and [nix-direnv](https://github.com/nix-community/nix-direnv) build environements on NixOS.
+Built with [Deno](https://deno.land/), [Lume](https://lume.land) static site generator, [Direnv](https://direnv.net/) and [nix-direnv](https://github.com/nix-community/nix-direnv) build environements on Nix/NixOS.
 
 #### 1. Install direnv and nix-direnv
 
@@ -54,7 +52,7 @@ on NixOS 23.05 and earlier:
 
 ````
 { pkgs, ... }: {
-  environment.systemPackages = with pkgs; [ 
+  environment.systemPackages = with pkgs; [
     ...
     direnv
     nix-direnv
@@ -111,11 +109,11 @@ pkgs.mkShell {
     #nodePackages.pnpm
   ];
   shellHook = ''
-    
+
     # aliases
     alias ls="exa --long --group --header -a --classify --links --level=3 --color=auto --sort=type --time-style=long-iso --extended"
-    alias find="fd --hidden --list-details --color=auto" 
-    
+    alias find="fd --hidden --list-details --color=auto"
+
     # optionally import parent shell config, or copy the desired subset into this shellHook section
     [ -x ~/.zshrc ] && source ~/.zshrc
 
