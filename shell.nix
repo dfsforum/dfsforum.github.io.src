@@ -5,7 +5,7 @@ pkgs.mkShell {
     direnv
     xclip
     duf
-    exa
+    eza
     fd
     # project-specific build inputs
     deno
